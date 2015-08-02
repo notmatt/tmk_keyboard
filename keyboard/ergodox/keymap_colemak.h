@@ -110,7 +110,8 @@ static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         TRNS, TRNS, TRNS
     )
 };
+
 static const uint16_t PROGMEM fn_actions[] = {
-    ACTION_LAYER_SET(0, ON_BOTH),    // Set Layer 0 (Colematt)
-    ACTION_LAYER_SET(1, ON_BOTH)     // Set Layer 1 (Qwerty)
+    ACTION_LAYER_SET(0, ON_PRESS),    // Set Layer 0 (Colematt)
+    ACTION_LAYER_SET(1, ON_PRESS)     // Set Layer 1 (Qwerty)
 };
