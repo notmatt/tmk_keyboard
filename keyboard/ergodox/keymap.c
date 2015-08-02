@@ -218,7 +218,7 @@ uint8_t keymap_key_to_keycode(uint8_t layer, keypos_t key)
     }
 }
 
-#if defined(KEYMAP_CUB)
+#if defined(KEYMAP_CUB) || defined (KEYMAP_COLEMAK)
 
 // function keymap_fn_to_action will be defined in keymap_cub.h
 

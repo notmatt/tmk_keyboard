@@ -544,6 +544,7 @@ void action_function(keyrecord_t *record, uint8_t id, uint8_t opt)
 
 }
 
+/*
 #include "keymap_passwords.h"
 const macro_t *action_get_macro(keyrecord_t *record, uint8_t id, uint8_t opt) {
     if (record->event.pressed) {
@@ -554,6 +555,7 @@ const macro_t *action_get_macro(keyrecord_t *record, uint8_t id, uint8_t opt) {
     }
     return MACRO_NONE;
 }
+*/
 
 #define FN_ACTIONS_SIZE     (sizeof(fn_actions)   / sizeof(fn_actions[0]))
 #define FN_ACTIONS_4_SIZE   (sizeof(fn_actions_4) / sizeof(fn_actions_4[0]))
