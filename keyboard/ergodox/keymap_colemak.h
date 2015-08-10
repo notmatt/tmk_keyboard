@@ -3,36 +3,35 @@ static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      * Keymap: default lay in COLEMAK-ish, nut missing quotes, braces (see l2)
      *
      * +-----+---+---+---+---+---+---+    +---+---+---+---+---+---+-----+
-     * | esc | 1 | 2 | 3 | 4 | 5 | = |    | ` | 6 | 7 | 8 | 9 | 0 | bak |
+     * | esc | 1 | 2 | 3 | 4 | 5 | ` |    | = | 6 | 7 | 8 | 9 | 0 | bak |
      * +-----+---+---+---+---+---+---+    +---|---+---+---+---+---+-----+
      * | tab | Q | W | F | P | G |   |    |   | J | L | U | Y | ; |  |  |
-     * +-----+---+---+---+---+---|   |    |   |---+---+---+---+---+-----+
+     * +-----+---+---+---+---+---|bak|    |CMD|---+---+---+---+---+-----+
      * | ctl | A | R | S | T | D |---+    +---| H | N | E | I | O | ent |
      * +-----+---+---+---+---+---+   |    |   +---+---+---+---+---+-----+
-     * | sft | Z | X | C | V | B |   |    |   | K | M | < | > | ? | sft |
+     * | sft | Z | X | C | V | B |sL2|    |sL2| K | M | < | > | ? | sft |
      * +-----+---+---+---+---+---+---+    +---+---+---+---+---+---+-----+
      *       |   |   |   |   |sL2|            |sL2|lft|dwn| up|rgt|
      *       +---+---+---+---+---+            +---+---+---+---+---+
      *
      *                     +---+---+    +---+---+
-     *                     |   |+L1|    |   |   |
+     *                     |+L1|sL3|    |   |   |
      *                 +---+---+---+    +---+---+---+
      *                 |   |   |alt|    |alt|   |   |
-     *                 |cmd|l4 |---+    +---|ent|spc|
-     *                 |   |(2)|ctl|    |ctl|(1)|   |
+     *                 |cmd|sft|---+    +---|ent|spc|
+     *                 |   |   |ctl|    |ctl|(1)|   |
      *                 +---+---+---+    +---+---+---+
      *
-     * (1) 'sL2' - stick layer modification.
-     * (2)
+     * (1) 'sL2' - layer modification.
      *
      * Keymap: Layer 1 is QWERTY
      *
      * +-----+---+---+---+---+---+---+    +---+---+---+---+---+---+-----+
      * |  ^  | ^ | ^ | ^ | ^ | ^ | ^ |    | ^ | ^ | ^ | ^ | ^ | ^ |  ^  |
      * +-----+---+---+---+---+---+---+    +---|---+---+---+---+---+-----+
-     * |  ^  | Q | W | E | R | T |   |    |   | Y | U | I | O | P |  \  |
+     * |  ^  | Q | W | E | R | T |   |    |   | Y | U | I | O | P |  ^  |
      * +-----+---+---+---+---+---|   |    |   |---+---+---+---+---+-----+
-     * |  ^  | A | S | D | F | G |---+    +---| H | J | K | L | ; |  '  |
+     * |  ^  | A | S | D | F | G |---+    +---| H | J | K | L | ; |  ^  |
      * +-----+---+---+---+---+---+   |    |   +---+---+---+---+---+-----+
      * |  ^  | Z | X | C | V | B |   |    |   | K | M | < | > | ? |  ^  |
      * +-----+---+---+---+---+---+---+    +---+---+---+---+---+---+-----+
@@ -40,7 +39,7 @@ static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      *       +---+---+---+---+---+            +---+---+---+---+---+
      *
      *                     +---+---+    +---+---+
-     *                     |   |+L0|    |   |   |
+     *                     |+L0|   |    |   |   |
      *                 +---+---+---+    +---+---+---+
      *                 |   |   | ^ |    | ^ |   |   |
      *                 |^  | ^ |---+    +---| ^ | ^ |
@@ -53,29 +52,31 @@ static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      * +-----+---+---+---+---+---+---+    +---+---+---+---+---+---+-----+
      * |     |   |   |   |   |   |   |    |   |   |   |   |   |   |     |
      * +-----+---+---+---+---+---+---+    +---|---+---+---+---+---+-----+
-     * |     | # | & | | | * |   |   |    |   |   | { | } | [ | ] |     |
+     * |     |   | | | & | * |   |   |    |   |   | { | } |   |   |     |
      * +-----+---+---+---+---+---|   |    |   |---+---+---+---+---+-----+
-     * |     | ^ | + | - | = |   |---+    +---|   | ( | ) | ' | " |     |
+     * |     |   | + | - | = | @ |---+    +---| ' | ( | ) | " |   |     |
      * +-----+---+---+---+---+---+   |    |   +---+---+---+---+---+-----+
-     * |     |   | ~ | % | ! |   |   |    |   |   | \ | / | ` | _ |     |
+     * |     |   | % | / | ! | # |   |    |   | \ | [ | ] | / |   |     |
      * +-----+---+---+---+---+---+---+    +---+---+---+---+---+---+-----+
      *       |   |   |   |   |   |            |   |   |   |   |   |
      *       +---+---+---+---+---+            +---+---+---+---+---+
      *
      *                     +---+---+    +---+---+
-     *                     |   |+L0|    |   |   |
+     *                     |+L0|   |    |   |   |
      *                 +---+---+---+    +---+---+---+
      *                 |   |   |   |    |   |   |   |
-     *                 |   |   |---+    +---|   |   |
+     *                 |   |   |---+    +---| - | _ |
      *                 |   |   |   |    |   |   |   |
      *                 +---+---+---+    +---+---+---+
+     *
+     * Keymap: Layer 3 - media.
      *
      * +-----+---+---+---+---+---+---+    +---+---+---+---+---+---+-----+
      * |     |   |   |   |   |   |   |    |   |   |   |   |   |   |     |
      * +-----+---+---+---+---+---+---+    +---|---+---+---+---+---+-----+
-     * |     |   |   |   |   |   |   |    |   |   |   |   |   |   |     |
+     * |     |   |   |   |   |   |   |    |   |   |MUT|VLD|VLU|   |     |
      * +-----+---+---+---+---+---|   |    |   |---+---+---+---+---+-----+
-     * |     |   |   |   |   |   |---+    +---|   |   |   |   |   |     |
+     * |     |   |   |   |   |   |---+    +---|   |PRV|PLY|NXT|   |     |
      * +-----+---+---+---+---+---+   |    |   +---+---+---+---+---+-----+
      * |     |   |   |   |   |   |   |    |   |   |   |   |   |   |     |
      * +-----+---+---+---+---+---+---+    +---+---+---+---+---+---+-----+
@@ -83,42 +84,45 @@ static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      *      +---+---+---+---+---+            +---+---+---+---+---+
      *
      *                     +---+---+    +---+---+
-     *                     |   |   |    |   |   |
+     *                     |+L0|   |    |   |   |
      *                 +---+---+---+    +---+---+---+
      *                 |   |   |   |    |   |   |   |
      *                 |   |   |---+    +---|   |   |
      *                 |   |   |   |    |   |   |   |
      *                 +---+---+---+    +---+---+---+
      *
+     * Other ideas for functions & keys:
+     *   - common hotkeys; save, close.
+     *     - those can map between OS-standard and, say, emacs.
      */
 
     KEYMAP( // L0: default
-         ESC,    1,    2,    3,    4,    5,  EQL,
+         ESC,    1,    2,    3,    4,    5,  GRV,
          TAB,    Q,    W,    F,    P,    G, BSPC,
         LCTL,    A,    R,    S,    T,    D,
-        LSFT,    Z,    X,    C,    V,    B,    Z,
-        LSFT, LGUI, LALT, LCTL, FN17,
-                                        NO,  FN1,
+        LSFT,    Z,    X,    C,    V,    B, FN17,
+          NO,   NO,   NO,   NO, FN17,
+                                       FN1, FN18,
                                             LALT,
-                                LGUI, LSFT, LCTL,
+                                LGUI, FN17, LCTL,
 
-         GRV,    6,    7,    8,    9,    0, BSPC,
-         TAB,    J,    L,    U,    Y, SCLN, BSLS,
-                 H,    N,    E,    I,    O, QUOT,
-           Z,    K,    M, COMM,  DOT, SLSH, RSFT,
+         EQL,    6,    7,    8,    9,    0, BSPC,
+        RGUI,    J,    L,    U,    Y, SCLN, BSLS,
+                 H,    N,    E,    I,    O,  ENT,
+        FN17,    K,    M, COMM,  DOT, SLSH, RSFT,
                     FN17, LEFT, DOWN,   UP, RGHT,
           NO,   NO,
         RALT,
-        RCTL,  ENT,  SPC
+        RCTL, FN17,  SPC
     ),
 
-    KEYMAP( // L0: default
+    KEYMAP( // L1: QWERTY
         TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS,
         TRNS,    Q,    W,    E,    R,    T, TRNS,
         TRNS,    A,    S,    D,    F,    G,
         TRNS,    Z,    X,    C,    V,    B, TRNS,
         TRNS, TRNS, TRNS, TRNS, TRNS,
-                                      TRNS,  FN0,
+                                       FN0, TRNS,
                                             TRNS,
                                 TRNS, TRNS, TRNS,
 
@@ -132,20 +136,40 @@ static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         TRNS, TRNS, TRNS
     ),
 
-    KEYMAP( // L0: default
+    KEYMAP( // L2: punct
         TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS,
-        TRNS,  FN2,  FN3,  FN4,  FN5, TRNS, TRNS,
-        TRNS,  FN6,  FN7, MINS,  EQL, TRNS,
-        TRNS, TRNS,  FN8,  FN9, FN10, TRNS, TRNS,
+        TRNS, TRNS,  FN4,  FN3,  FN5, TRNS, TRNS,
+        TRNS, TRNS,  FN7, MINS,  EQL, FN19,
+        TRNS, TRNS,  FN9, SLSH, FN10, FN20, TRNS,
         TRNS, TRNS, TRNS, TRNS, TRNS,
-                                      TRNS,  FN0,
+                                      TRNS, TRNS,
                                             TRNS,
                                 TRNS, TRNS, TRNS,
 
         TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS,
-        TRNS, TRNS, FN11, FN12, LBRC, RBRC, TRNS,
-              TRNS, FN13, FN14, QUOT, FN15, TRNS,
-        TRNS, TRNS, BSLS, SLSH,  GRV, FN16, TRNS,
+        TRNS, TRNS, FN11, FN12, TRNS, TRNS, TRNS,
+              QUOT, FN13, FN14, FN15, SCLN, TRNS,
+        TRNS, BSLS, LBRC, RBRC, SLSH, TRNS, TRNS,
+                    TRNS, TRNS, TRNS, TRNS, TRNS,
+        TRNS, TRNS,
+        TRNS,
+        TRNS, TRNS, FN16
+    ),
+
+    KEYMAP( // L3: media
+        TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS,
+        TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS,
+        TRNS, TRNS, TRNS, TRNS, TRNS, TRNS,
+        TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS,
+        TRNS, TRNS, TRNS, TRNS, TRNS,
+                                      TRNS, TRNS,
+                                            TRNS,
+                                TRNS, TRNS, TRNS,
+
+        TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS,
+        TRNS, TRNS, MUTE, VOLD, VOLU, TRNS, TRNS,
+              TRNS, MPRV, MPLY, MNXT, TRNS, TRNS,
+        TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS,
                     TRNS, TRNS, TRNS, TRNS, TRNS,
         TRNS, TRNS,
         TRNS,
@@ -174,7 +198,11 @@ static const uint16_t PROGMEM fn_actions[] = {
     ACTION_MODS_KEY(MOD_LSFT, KC_QUOT),      // " FN15
     ACTION_MODS_KEY(MOD_LSFT, KC_MINUS),     // _ FN16
 
-    ACTION_LAYER_MOMENTARY(2)        // FN18 sticky l2 punctuation layer?
+    ACTION_LAYER_MOMENTARY(2),               // FN17 - punct
+    ACTION_LAYER_MOMENTARY(3),               // FN18 - media
+
+    ACTION_MODS_KEY(MOD_LSFT, KC_2),         // FN19 - @
+    ACTION_MODS_KEY(MOD_LSFT, KC_3)          // FN20 - #
 };
 
 // void action_function(keyrecord_t *record, uint8_t id, uint8_t opt)
@@ -196,7 +224,7 @@ action_t keymap_fn_to_action(uint8_t keycode)
     action_t action;
     action.code = ACTION_NO;
 
-    print("keymap_fn_to_action called with: "); phex(keycode); print("\n");
+    // print("keymap_fn_to_action called with: "); phex(keycode); print("\n");
 
     if (action.code == ACTION_NO && FN_INDEX(keycode) < FN_ACTIONS_SIZE) {
         action.code = pgm_read_word(&fn_actions[FN_INDEX(keycode)]);
