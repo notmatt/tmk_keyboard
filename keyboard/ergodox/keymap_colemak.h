@@ -107,7 +107,7 @@ static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                 LGUI,  FN2,   NO,
 
          EQL,    6,    7,    8,    9,    0,   NO,
-        FN23,    J,    L,    U,    Y, SCLN,  BAK,
+        FN23,    J,    L,    U,    Y, SCLN, BSPC,
                  H,    N,    E,    I,    O,  ENT,
         FN22,    K,    M, COMM,  DOT, SLSH, FN24,
                      FN2, LEFT, DOWN,   UP, RGHT,
@@ -181,7 +181,7 @@ static const uint16_t PROGMEM fn_actions[] = {
     ACTION_DEFAULT_LAYER_SET(0),             // Set Layer 0 (Colematt)
     ACTION_DEFAULT_LAYER_SET(1),             // Set Layer 1 (Qwerty)
     ACTION_LAYER_MOMENTARY(2),               // FN2 - punct
-    ACTION_LAYER_TAP_KEY(2, KC_SPC)          // FN3 - tap-space, hold punct
+    ACTION_LAYER_TAP_KEY(2, KC_SPC),         // FN3 - tap-space, hold punct
     ACTION_LAYER_MOMENTARY(3),               // FN4 - media
 
     /* punctuation layer */
@@ -207,9 +207,9 @@ static const uint16_t PROGMEM fn_actions[] = {
     ACTION_MODS_ONESHOT(MOD_LCTL),           // FN23 - oneshot ctrl
     ACTION_MODS_ONESHOT(MOD_LSFT),           // FN24 - oneshot shift
     ACTION_MODS_TAP_TOGGLE(MOD_LSFT),        // FN25 - tap-toggle shift
-    ACTION_MODS_KEY(MOD_LALT | MOD_LSFT),    // FN26 - alt-shift 'select'
+    ACTION_MODS(MOD_LALT | MOD_LSFT),    // FN26 - alt-shift 'select'
 
-    ACTION_MODS_KEY(MOD_LGUI | MOD_LSFT, KC_LBRACKT),   // FN27 - cmd-{
+    ACTION_MODS_KEY(MOD_LGUI | MOD_LSFT, KC_LBRACKET),   // FN27 - cmd-{
     ACTION_MODS_KEY(MOD_LGUI | MOD_LSFT, KC_RBRACKET)   // FN28 - cnd-}
 };
 
