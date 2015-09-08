@@ -49,14 +49,19 @@ static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      *
      * Keymap: Layer 2 is a symbol/punctuation layer
      *
+     *   | & * ` ~ [ ]
+     * " - ( = { } + ) ; '
+     * \ < > ! @ # / _ % ?
+     * pointer ops: & * ->
+     *
      * +-----+---+---+---+---+---+---+    +---+---+---+---+---+---+-----+
      * |     |F1 |F2 |F3 |F4 |F5 |F6 |    |F7 |F8 |F9 |F10|F11|F12|     |
      * +-----+---+---+---+---+---+---+    +---|---+---+---+---+---+-----+
-     * |     |   | | | & | * | ` |   |    |   |   | { | } |   |   |     |
+     * |     |   | | | & | * | ` |   |    |   | ~ | [ | ] |   |   |     |
      * +-----+---+---+---+---+---|   |    |   |---+---+---+---+---+-----+
-     * |     |   | + | - | = | @ |---+    +---| ' | ( | ) | " |   |     |
+     * |     | " | - | ( | = | { |---+    +---| } | + | ) | ; | ' |     |
      * +-----+---+---+---+---+---+   |    |   +---+---+---+---+---+-----+
-     * |     |   | % | / | ! | # |   |    |   | \ | [ | ] | / |   |     |
+     * |     | \ | < | > | ! | @ |   |    |   | # | / | _ | % |   |     |
      * +-----+---+---+---+---+---+---+    +---+---+---+---+---+---+-----+
      *       |   |   |   |   |   |            |   |prv|   |   |nxt|
      *       +---+---+---+---+---+            +---+---+---+---+---+
@@ -99,21 +104,21 @@ static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KEYMAP( // L0: default
          ESC,    1,    2,    3,    4,    5, MINS,
          TAB,    Q,    W,    F,    P,    G, BSPC,
-        FN23,    A,    R,    S,    T,    D,
-        FN24,    Z,    X,    C,    V,    B, FN25,
-         FN4, FN21, FN22, FN23,  FN2,
+        FN25,    A,    R,    S,    T,    D,
+        FN27,    Z,    X,    C,    V,    B, FN27,
+         FN4, FN23, FN24, FN25,  FN2,
                                        FN1,  FN4,
                                               NO,
                                 LGUI,  FN2,   NO,
 
          EQL,    6,    7,    8,    9,    0,   NO,
-        FN23,    J,    L,    U,    Y, SCLN, BSPC,
+        FN25,    J,    L,    U,    Y, SCLN, BSPC,
                  H,    N,    E,    I,    O,  ENT,
-        FN22,    K,    M, COMM,  DOT, SLSH, FN24,
+        FN24,    K,    M, COMM,  DOT, SLSH, FN27,
                      FN2, LEFT, DOWN,   UP, RGHT,
           NO,   NO,
         RALT,
-        RCTL,  FN2,  FN3
+        RCTL,  FN2,  SPC
     ),
 
     KEYMAP( // L1: QWERTY
@@ -127,9 +132,9 @@ static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                 TRNS, TRNS, TRNS,
 
         TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS,
-        TRNS,    Y,    U,    I,    O,    P, BSLS,
-                 H,    J,    K,    L, SCLN, QUOT,
-        TRNS,    K,    M, COMM,  DOT, SLSH, TRNS,
+        TRNS,    Y,    U,    I,    O,    P, TRNS,
+                 H,    J,    K,    L, SCLN, TRNS,
+        TRNS,    N,    M, COMM,  DOT, SLSH, TRNS,
                     TRNS, TRNS, TRNS, TRNS, TRNS,
         TRNS, TRNS,
         TRNS,
@@ -137,27 +142,27 @@ static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
 
     KEYMAP( // L2: punct
-        TRNS,   F1,   F2,   F3,   F4,   F5,   F6,
+        TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS,
         TRNS, TRNS,  FN7,  FN6,  FN8,  GRV, TRNS,
-        TRNS, TRNS, FN10, MINS,  EQL, FN20,
-        TRNS, TRNS, FN12, SLSH, FN13,  FN5, TRNS,
+        TRNS, FN18, MINS, FN16,  EQL, FN14,
+        TRNS, BSLS, FN21, FN22, FN13, FN20, TRNS,
         TRNS, TRNS, TRNS, TRNS, TRNS,
                                       TRNS, TRNS,
                                             TRNS,
                                 TRNS, TRNS, TRNS,
 
-          F7,   F8,   F9,  F10,  F11,  F12, TRNS,
-        TRNS,  GRV, FN14, FN15, TRNS, TRNS, TRNS,
-              QUOT, FN16, FN17, FN18, SCLN, TRNS,
-        TRNS, BSLS, LBRC, RBRC, SLSH, TRNS, TRNS,
-                    TRNS, FN27, TRNS, TRNS, FN28,
+        TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS,
+        TRNS, FN11, LBRC, RBRC, TRNS, TRNS, TRNS,
+              FN15, FN10, FN17, SCLN, QUOT, TRNS,
+        TRNS,  FN5, SLSH, FN19, FN12, TRNS, TRNS,
+                    TRNS, FN29, TRNS, TRNS, FN30,
         TRNS, TRNS,
         TRNS,
         TRNS, TRNS, TRNS
     ),
 
     KEYMAP( // L3: media
-        TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS,
+        TRNS,   F1,   F2,   F3,   F4,   F5,   F6,
         TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS,
         TRNS, TRNS, TRNS, TRNS, TRNS, TRNS,
         TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS,
@@ -166,11 +171,11 @@ static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                             TRNS,
                                 TRNS, TRNS, TRNS,
 
-        TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS,
+          F7,   F8,   F9,  F10,  F11,  F12, TRNS,
         TRNS, TRNS, MUTE, VOLD, VOLU, TRNS, TRNS,
               TRNS, MPRV, MPLY, MNXT, TRNS, TRNS,
         TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS,
-                    TRNS, FN27, TRNS, TRNS, FN28,
+                    TRNS, FN29, TRNS, TRNS, FN30,
         TRNS, TRNS,
         TRNS,
         TRNS, TRNS, TRNS
@@ -201,16 +206,18 @@ static const uint16_t PROGMEM fn_actions[] = {
     ACTION_MODS_KEY(MOD_LSFT, KC_QUOT),      // " FN18
     ACTION_MODS_KEY(MOD_LSFT, KC_MINUS),     // _ FN19
     ACTION_MODS_KEY(MOD_LSFT, KC_2),         // @ FN20
+    ACTION_MODS_KEY(MOD_LSFT, KC_COMMA),     // < FN21
+    ACTION_MODS_KEY(MOD_LSFT, KC_DOT),       // > FN22
 
-    ACTION_MODS_ONESHOT(MOD_LALT),           // FN21 - oneshot alt
-    ACTION_MODS_ONESHOT(MOD_LGUI),           // FN22 - oneshot cmd
-    ACTION_MODS_ONESHOT(MOD_LCTL),           // FN23 - oneshot ctrl
-    ACTION_MODS_ONESHOT(MOD_LSFT),           // FN24 - oneshot shift
-    ACTION_MODS_TAP_TOGGLE(MOD_LSFT),        // FN25 - tap-toggle shift
-    ACTION_MODS(MOD_LALT | MOD_LSFT),    // FN26 - alt-shift 'select'
+    ACTION_MODS_ONESHOT(MOD_LALT),           // FN23 - oneshot alt
+    ACTION_MODS_ONESHOT(MOD_LGUI),           // FN24 - oneshot cmd
+    ACTION_MODS_ONESHOT(MOD_LCTL),           // FN25 - oneshot ctrl
+    ACTION_MODS_ONESHOT(MOD_LSFT),           // FN26 - oneshot shift
+    ACTION_MODS_TAP_TOGGLE(MOD_LSFT),        // FN27 - tap-toggle shift
+    ACTION_MODS(MOD_LALT | MOD_LSFT),        // FN28 - alt-shift 'select'
 
-    ACTION_MODS_KEY(MOD_LGUI | MOD_LSFT, KC_LBRACKET),   // FN27 - cmd-{
-    ACTION_MODS_KEY(MOD_LGUI | MOD_LSFT, KC_RBRACKET)   // FN28 - cnd-}
+    ACTION_MODS_KEY(MOD_LGUI | MOD_LSFT, KC_LBRACKET),   // FN29 - cmd-{
+    ACTION_MODS_KEY(MOD_LGUI | MOD_LSFT, KC_RBRACKET)   // FN30 - cnd-}
 };
 
 // void action_function(keyrecord_t *record, uint8_t id, uint8_t opt)
